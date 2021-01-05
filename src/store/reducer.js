@@ -1,7 +1,8 @@
 // src/store/reducer.js
 const initialState = {
   user: {
-    name: "Helva",
+    name: "Andreea",
+    favorites: [161235, 357311],
   },
   pizzas: [
     {
@@ -40,9 +41,29 @@ export default function reducer(state = initialState, action) {
             id: action.payload.id,
             name: action.payload.name,
             description: action.payload.description,
-            bought: 0,
+            bought: action.payload.bought,
           },
         ],
+      };
+    }
+    case "TOGGLE_FAVORITE_PIZZA": {
+      const pizzaId = action.payload;
+      const pizzaIsFavorite = state.user.favorites.includes(pizzaId);
+      let newFavorites;
+      if (pizzaIsFavorite) {
+        newFavorites = state.user.favorites.filter((favoriteId) => {
+          return favoriteId !== pizzaId;
+        });
+      } else {
+        newFavorites = [...state.user.favorites, pizzaId];
+      }
+
+      return {
+        ...state,
+        user: {
+          ...state.user,
+          favorites: newFavorites,
+        },
       };
     }
     default: {
