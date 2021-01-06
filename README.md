@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<h3 align="left">Goals for this project</h3>
+
+<ul>
+<li>practice CSS and styling</li>
+</ul>
 
 ## Available Scripts
 
