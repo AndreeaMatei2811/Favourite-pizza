@@ -5,6 +5,8 @@ import "./App.css";
 function App() {
   return (
     <div>
+      <h1>My favourite pizza</h1>
+
       <PizzaList />
       <AddPizzaForm />
     </div>

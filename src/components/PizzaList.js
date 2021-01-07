@@ -26,7 +26,10 @@ export default function PizzaList() {
 
   return (
     <div className="PizzaList">
-      <h1>Pizza Explorer</h1>
+      <section>
+        <h1 className="pizza-title">Pizza Explorer</h1>
+      </section>
+
       <p>
         Welcome back, <strong>{user.name}</strong>! Your favorite pizzas:
       </p>
